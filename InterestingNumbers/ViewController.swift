@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     let mainScreen = MainScreen()
     var rangeFrom = 0
     var rangeTo = 0
-    let collectionView = YourViewController()
-    
+    let collectionView = FactsViewController()
+    var displayOneFact = true
     
     override func loadView() {
         mainScreen.delegate = self
@@ -46,16 +46,17 @@ class ViewController: UIViewController {
         }
 
         private func handleUserNumberButtonTapped() {
+            displayOneFact = true
             clearTheTextField()
         }
 
         private func handleRandomNumberButtonTapped() {
-            // Add your specific functionality for randomNumberButton tapped
+            displayOneFact = true
             mainScreen.textField.text = "\(Int.random(in: 0...1000))"
         }
 
         private func handleNumberInRangeButtonTapped() {
-            // Add your specific functionality for numberInRangeButton tapped
+            displayOneFact = false
             let alert = UIAlertController(title: "Provide two numbers for the range", message: "", preferredStyle: .alert)
 
             alert.addTextField { (textField) in
@@ -92,6 +93,7 @@ class ViewController: UIViewController {
         }
 
         private func handleMultipleNumbersButtonTapped() {
+            displayOneFact = false
             clearTheTextField()
             
             let alert = UIAlertController(title: "Type as much numbers as you want and put a comma after each of them but the last", message: "Like this: 1,2,3", preferredStyle: .alert)
@@ -104,10 +106,17 @@ class ViewController: UIViewController {
         }
     
     private func handleDisplayFactButtonTapped() {
-        print("Hello")
-        let yourViewController = YourViewController()
-           yourViewController.modalPresentationStyle = .fullScreen // Optional: if you want the new view to take up the whole screen
-           self.present(yourViewController, animated: true, completion: nil)
+        guard let numbers = mainScreen.textField.text else {return}
+        let factsViewController = FactsViewController()
+        if displayOneFact {
+            factsViewController.numbersManager.parseOneFact = true
+            factsViewController.numbersManager.userInputNumber = numbers
+        } else {
+            factsViewController.numbersManager.parseOneFact = false
+        }
+        factsViewController.userInput = numbers
+        factsViewController.modalPresentationStyle = .fullScreen // Optional: if you want the new view to take up the whole screen
+        self.present(factsViewController, animated: true, completion: nil)
     }
     
     func clearTheTextField() {
@@ -128,4 +137,3 @@ extension ViewController: UITextFieldDelegate {
         return allowedCharacters.isSuperset(of: characterSet)
     }
 }
-

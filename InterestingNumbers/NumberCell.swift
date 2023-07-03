@@ -14,8 +14,9 @@ class NumberCell: UICollectionViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.font = UIFont.init(name: "OpenSans-Bold", size: 28)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         return label
     }()
 
@@ -23,8 +24,9 @@ class NumberCell: UICollectionViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont.init(name: "OpenSans-SemiBold", size: 16)
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         return label
     }()
 

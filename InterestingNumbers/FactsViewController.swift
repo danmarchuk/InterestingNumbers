@@ -8,21 +8,19 @@
 import UIKit
 
 // Create the ViewController with CollectionView
-class YourViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class FactsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private var collectionView: UICollectionView!
-    private let numbers = ["1", "2", "3"]
-    private let facts = [
-        "1 is the number of dimensions of a line",
-        "2 is the first magic number in physics",
-        "3 is the number of points received for a successful field goal in both American football and Canadian football"
-    ]
+    var userInput = ""
+    var numbersManager = NumbersManager()
+
+    private var numbers: [String] = []
+    private var factsAboutNumbers: [String] = []
 
     override func viewDidLoad() {
-        
-        
-        
         super.viewDidLoad()
+        numbersManager.delegate = self
+        numbersManager.fetchFacts(numbers: userInput)
         view.backgroundColor = .purple
 
         // Setup collectionView
@@ -56,7 +54,7 @@ class YourViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberCell.identifier, for: indexPath) as! NumberCell
-        cell.configure(withTitle: numbers[indexPath.row], description: facts[indexPath.row])
+        cell.configure(withTitle: numbers[indexPath.row], description: factsAboutNumbers[indexPath.row])
         cell.backgroundColor = .clear
         return cell
     }
@@ -65,6 +63,25 @@ class YourViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width, height: view.frame.size.height / 2)
+    }
+}
+
+extension FactsViewController: NumbersManagerDelegate {
+    func didUpdateNumberFacts(_ manager: NumbersManager, facts: [String : String]) {
+        
+        let sortedFacts = facts.sorted { $0.key.localizedStandardCompare($1.key) == .orderedAscending }
+
+        for (key, value) in sortedFacts {
+            numbers.append(key)
+            factsAboutNumbers.append(value)
+        }
+        
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func didFailWithError(error: Error) {
     }
 }
 

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,15 @@
 		9357C5132A4F441D00CF4C88 /* InterestingNumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C5122A4F441D00CF4C88 /* InterestingNumbersTests.swift */; };
 		9357C51D2A4F441D00CF4C88 /* InterestingNumbersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C51C2A4F441D00CF4C88 /* InterestingNumbersUITests.swift */; };
 		9357C51F2A4F441D00CF4C88 /* InterestingNumbersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C51E2A4F441D00CF4C88 /* InterestingNumbersUITestsLaunchTests.swift */; };
+		9357C5322A4F4CE500CF4C88 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C5312A4F4CE500CF4C88 /* MainScreen.swift */; };
+		9357C5342A4F4F0800CF4C88 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C5332A4F4F0800CF4C88 /* Extensions.swift */; };
+		939102FF2A531749002A4810 /* FactsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939102FE2A531749002A4810 /* FactsScreen.swift */; };
+		939103012A531B0A002A4810 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939103002A531B0A002A4810 /* NumberCell.swift */; };
+		93DF31032A507A9000B55099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93DF31022A507A9000B55099 /* SnapKit */; };
+		93DF31042A507AB500B55099 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93DF30FF2A507A5900B55099 /* OpenSans-Bold.ttf */; };
+		93DF31052A507AB700B55099 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93DF30FE2A507A5900B55099 /* OpenSans-Light.ttf */; };
+		93DF31062A507AB900B55099 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93DF31002A507A5900B55099 /* OpenSans-Regular.ttf */; };
+		93DF31082A507D3600B55099 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93DF31072A507C1B00B55099 /* OpenSans-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,14 @@
 		9357C5182A4F441D00CF4C88 /* InterestingNumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestingNumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9357C51C2A4F441D00CF4C88 /* InterestingNumbersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingNumbersUITests.swift; sourceTree = "<group>"; };
 		9357C51E2A4F441D00CF4C88 /* InterestingNumbersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingNumbersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9357C5312A4F4CE500CF4C88 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		9357C5332A4F4F0800CF4C88 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		939102FE2A531749002A4810 /* FactsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsScreen.swift; sourceTree = "<group>"; };
+		939103002A531B0A002A4810 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		93DF30FE2A507A5900B55099 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../../../Downloads/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		93DF30FF2A507A5900B55099 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../../Downloads/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		93DF31002A507A5900B55099 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../Downloads/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		93DF31072A507C1B00B55099 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBold.ttf"; path = "../../../../../Downloads/Open_Sans/static/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DF31032A507A9000B55099 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +120,12 @@
 				9357C4FB2A4F441B00CF4C88 /* AppDelegate.swift */,
 				9357C4FD2A4F441B00CF4C88 /* SceneDelegate.swift */,
 				9357C4FF2A4F441B00CF4C88 /* ViewController.swift */,
+				939102FE2A531749002A4810 /* FactsScreen.swift */,
+				939103002A531B0A002A4810 /* NumberCell.swift */,
+				9357C5312A4F4CE500CF4C88 /* MainScreen.swift */,
+				9357C5332A4F4F0800CF4C88 /* Extensions.swift */,
 				9357C5012A4F441B00CF4C88 /* Main.storyboard */,
+				9357C52F2A4F45F800CF4C88 /* Fonts */,
 				9357C5042A4F441D00CF4C88 /* Assets.xcassets */,
 				9357C5062A4F441D00CF4C88 /* LaunchScreen.storyboard */,
 				9357C5092A4F441D00CF4C88 /* Info.plist */,
@@ -127,6 +150,17 @@
 			path = InterestingNumbersUITests;
 			sourceTree = "<group>";
 		};
+		9357C52F2A4F45F800CF4C88 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				93DF30FF2A507A5900B55099 /* OpenSans-Bold.ttf */,
+				93DF30FE2A507A5900B55099 /* OpenSans-Light.ttf */,
+				93DF31072A507C1B00B55099 /* OpenSans-SemiBold.ttf */,
+				93DF31002A507A5900B55099 /* OpenSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +177,9 @@
 			dependencies = (
 			);
 			name = InterestingNumbers;
+			packageProductDependencies = (
+				93DF31022A507A9000B55099 /* SnapKit */,
+			);
 			productName = InterestingNumbers;
 			productReference = 9357C4F82A4F441B00CF4C88 /* InterestingNumbers.app */;
 			productType = "com.apple.product-type.application";
@@ -207,7 +244,7 @@
 				};
 			};
 			buildConfigurationList = 9357C4F32A4F441B00CF4C88 /* Build configuration list for PBXProject "InterestingNumbers" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -215,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 9357C4EF2A4F441B00CF4C88;
+			packageReferences = (
+				93DF31012A507A9000B55099 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 9357C4F92A4F441B00CF4C88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +273,10 @@
 			files = (
 				9357C5082A4F441D00CF4C88 /* LaunchScreen.storyboard in Resources */,
 				9357C5052A4F441D00CF4C88 /* Assets.xcassets in Resources */,
+				93DF31082A507D3600B55099 /* OpenSans-SemiBold.ttf in Resources */,
+				93DF31042A507AB500B55099 /* OpenSans-Bold.ttf in Resources */,
+				93DF31052A507AB700B55099 /* OpenSans-Light.ttf in Resources */,
+				93DF31062A507AB900B55099 /* OpenSans-Regular.ttf in Resources */,
 				9357C5032A4F441B00CF4C88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9357C5342A4F4F0800CF4C88 /* Extensions.swift in Sources */,
+				939102FF2A531749002A4810 /* FactsScreen.swift in Sources */,
+				9357C5322A4F4CE500CF4C88 /* MainScreen.swift in Sources */,
 				9357C5002A4F441B00CF4C88 /* ViewController.swift in Sources */,
 				9357C4FC2A4F441B00CF4C88 /* AppDelegate.swift in Sources */,
 				9357C4FE2A4F441B00CF4C88 /* SceneDelegate.swift in Sources */,
+				939103012A531B0A002A4810 /* NumberCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +468,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -602,6 +650,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93DF31012A507A9000B55099 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93DF31022A507A9000B55099 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93DF31012A507A9000B55099 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9357C4F02A4F441B00CF4C88 /* Project object */;
 }

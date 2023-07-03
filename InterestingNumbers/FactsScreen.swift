@@ -19,6 +19,9 @@ class YourViewController: UIViewController, UICollectionViewDelegate, UICollecti
     ]
 
     override func viewDidLoad() {
+        
+        
+        
         super.viewDidLoad()
         view.backgroundColor = .purple
 

@@ -25,6 +25,7 @@
 		93B8B1242A532433007A74B6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93B8B1212A5323FF007A74B6 /* OpenSans-Regular.ttf */; };
 		93B8B1262A532467007A74B6 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93B8B1252A532464007A74B6 /* OpenSans-SemiBold.ttf */; };
 		93B8B1282A532801007A74B6 /* NumbersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B1272A532801007A74B6 /* NumbersManager.swift */; };
+		93B8B12F2A5390A2007A74B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B12E2A5390A2007A74B6 /* Constants.swift */; };
 		93DF31032A507A9000B55099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93DF31022A507A9000B55099 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		93B8B1212A5323FF007A74B6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../Downloads/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		93B8B1252A532464007A74B6 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBold.ttf"; path = "../../../../../Downloads/Open_Sans/static/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		93B8B1272A532801007A74B6 /* NumbersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersManager.swift; sourceTree = "<group>"; };
+		93B8B12E2A5390A2007A74B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +123,11 @@
 			children = (
 				9357C4FB2A4F441B00CF4C88 /* AppDelegate.swift */,
 				9357C4FD2A4F441B00CF4C88 /* SceneDelegate.swift */,
-				9357C4FF2A4F441B00CF4C88 /* ViewController.swift */,
-				93B8B1272A532801007A74B6 /* NumbersManager.swift */,
-				939102FE2A531749002A4810 /* FactsViewController.swift */,
-				939103002A531B0A002A4810 /* NumberCell.swift */,
+				93B8B12E2A5390A2007A74B6 /* Constants.swift */,
+				93B8B12C2A538E3D007A74B6 /* ViewController */,
+				93B8B12D2A538E49007A74B6 /* Model */,
+				93B8B12B2A538E15007A74B6 /* View */,
 				93B8B11E2A5323ED007A74B6 /* Fonts */,
-				9357C5312A4F4CE500CF4C88 /* MainScreen.swift */,
-				9357C5332A4F4F0800CF4C88 /* Extensions.swift */,
 				9357C5012A4F441B00CF4C88 /* Main.storyboard */,
 				9357C5042A4F441D00CF4C88 /* Assets.xcassets */,
 				9357C5062A4F441D00CF4C88 /* LaunchScreen.storyboard */,
@@ -162,6 +162,33 @@
 				93B8B1212A5323FF007A74B6 /* OpenSans-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		93B8B12B2A538E15007A74B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9357C5312A4F4CE500CF4C88 /* MainScreen.swift */,
+				939103002A531B0A002A4810 /* NumberCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93B8B12C2A538E3D007A74B6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9357C4FF2A4F441B00CF4C88 /* ViewController.swift */,
+				939102FE2A531749002A4810 /* FactsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		93B8B12D2A538E49007A74B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93B8B1272A532801007A74B6 /* NumbersManager.swift */,
+				9357C5332A4F4F0800CF4C88 /* Extensions.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +340,7 @@
 				9357C4FC2A4F441B00CF4C88 /* AppDelegate.swift in Sources */,
 				9357C4FE2A4F441B00CF4C88 /* SceneDelegate.swift in Sources */,
 				939103012A531B0A002A4810 /* NumberCell.swift in Sources */,
+				93B8B12F2A5390A2007A74B6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

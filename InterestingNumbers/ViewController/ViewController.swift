@@ -7,11 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     let mainScreen = MainScreen()
-    var rangeFrom = 0
-    var rangeTo = 0
     let collectionView = FactsViewController()
     var displayOneFact = true
     
@@ -78,9 +76,6 @@ class ViewController: UIViewController {
                     return
                 }
                 
-                // Store numbers in two variables
-                self.rangeFrom = fromNumber
-                self.rangeTo = toNumber
                 self.mainScreen.textField.text = "\(fromNumber)..\(toNumber)"
             }
 
@@ -115,7 +110,7 @@ class ViewController: UIViewController {
             factsViewController.numbersManager.parseOneFact = false
         }
         factsViewController.userInput = numbers
-        factsViewController.modalPresentationStyle = .fullScreen // Optional: if you want the new view to take up the whole screen
+        factsViewController.modalPresentationStyle = .fullScreen
         self.present(factsViewController, animated: true, completion: nil)
     }
     

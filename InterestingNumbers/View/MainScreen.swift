@@ -14,12 +14,7 @@ protocol MainScreenDelegate: AnyObject {
 }
 
 @IBDesignable
-class MainScreen: UIView {
-    static let textColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)
-    static let buttonColor = UIColor(red: 0.98, green: 0.97, blue: 0.99, alpha: 1.0)
-    static let borderColor = UIColor(red: 245/255, green: 239/255, blue: 251/255, alpha: 1).cgColor
-    static let purple = UIColor(red: 128/255, green: 51/255, blue: 204/255, alpha: 1.0)
-    static let grayIsh = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1.0)
+final class MainScreen: UIView {
     
     weak var delegate: MainScreenDelegate?
     var selectedButton: UIButton?
@@ -32,7 +27,7 @@ class MainScreen: UIView {
     let someOtherLabel = UILabel().apply {
         $0.text = "This App about facts of Numbers \nand Dates"
         $0.font = UIFont(name: "OpenSans-Light", size: 16)
-        $0.textColor = grayIsh
+        $0.textColor = K.grayIsh
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }
@@ -63,11 +58,11 @@ class MainScreen: UIView {
     
     let textField = UITextField().apply {
         $0.font = UIFont.systemFont(ofSize: 14)
-        $0.textColor = MainScreen.textColor
+        $0.textColor = K.textColor
         $0.backgroundColor = .clear
         $0.borderStyle = .none
         $0.layer.cornerRadius = 6
-        $0.layer.borderColor = MainScreen.borderColor
+        $0.layer.borderColor = K.borderColor
         $0.textAlignment = .left
         $0.keyboardType = .numberPad
     }
@@ -76,7 +71,7 @@ class MainScreen: UIView {
         $0.setTitle("Display Fact", for: .normal)
         $0.titleLabel?.font = UIFont(name: "OpenSans-Semibold", size: 18)
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = MainScreen.purple
+        $0.backgroundColor = K.purple
         $0.layer.cornerRadius = 5
     }
     
@@ -86,11 +81,11 @@ class MainScreen: UIView {
             $0.titleLabel?.font = UIFont(name: "OpenSans-Semibold", size: 13)
             $0.titleLabel?.textAlignment = .center
             $0.titleLabel?.numberOfLines = 0
-            $0.setTitleColor(MainScreen.textColor, for: .normal)
-            $0.backgroundColor = MainScreen.buttonColor
+            $0.setTitleColor(K.textColor, for: .normal)
+            $0.backgroundColor = K.buttonColor
             $0.layer.cornerRadius = 6
             $0.layer.borderWidth = 1
-            $0.layer.borderColor = MainScreen.borderColor
+            $0.layer.borderColor = K.borderColor
         }
     }
     
@@ -111,11 +106,11 @@ class MainScreen: UIView {
     
     @objc private func buttonTapped(_ sender: UIButton) {
         // Reset the previously selected button's color
-        selectedButton?.backgroundColor = MainScreen.buttonColor
-        selectedButton?.setTitleColor(MainScreen.textColor, for: .normal)
+        selectedButton?.backgroundColor = K.buttonColor
+        selectedButton?.setTitleColor(K.textColor, for: .normal)
         
         // Highlight the tapped button
-        sender.backgroundColor = MainScreen.purple
+        sender.backgroundColor = K.purple
         sender.setTitleColor(.white, for: .normal)
         
         // Update the selected button

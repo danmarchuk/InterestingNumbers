@@ -19,7 +19,6 @@ final class NumbersManager {
     
     func fetchFacts(numbers: String){
         let urlString = "\(factsURL)\(numbers)"
-        print(urlString)
         performRequest(with: urlString)
     }
     

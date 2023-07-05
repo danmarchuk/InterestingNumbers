@@ -84,8 +84,19 @@ final class ViewController: UIViewController {
                 guard let fromNumber = Int(fromTextField.text ?? ""), let toNumber = Int(toTextField.text ?? "") else {
                     return
                 }
+                let maxRange = 20
                 
-                self.mainScreen.textField.text = "\(fromNumber)..\(toNumber)"
+                if toNumber - fromNumber < maxRange {
+                    self.mainScreen.textField.text = "\(fromNumber)..\(toNumber)"
+                } else  {
+                    let alert = UIAlertController(title: "The range is too big", message: "It can't be more than 20", preferredStyle: .alert)
+
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+
+                    alert.addAction(cancelAction)
+
+                    self.present(alert, animated: true)
+                }
             }
 
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)

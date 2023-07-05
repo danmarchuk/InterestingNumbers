@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9344EBA42A55F974002821C1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA22A55F7E6002821C1 /* OpenSans-Bold.ttf */; };
+		9344EBA52A55F976002821C1 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA02A55F7E6002821C1 /* OpenSans-Light.ttf */; };
+		9344EBA62A55F978002821C1 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA12A55F7E6002821C1 /* OpenSans-Regular.ttf */; };
+		9344EBA72A55F97A002821C1 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA32A55F7E6002821C1 /* OpenSans-SemiBold.ttf */; };
 		9357C4FC2A4F441B00CF4C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C4FB2A4F441B00CF4C88 /* AppDelegate.swift */; };
 		9357C4FE2A4F441B00CF4C88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C4FD2A4F441B00CF4C88 /* SceneDelegate.swift */; };
 		9357C5002A4F441B00CF4C88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C4FF2A4F441B00CF4C88 /* ViewController.swift */; };
@@ -300,6 +304,10 @@
 			files = (
 				9357C5082A4F441D00CF4C88 /* LaunchScreen.storyboard in Resources */,
 				9357C5052A4F441D00CF4C88 /* Assets.xcassets in Resources */,
+				9344EBA72A55F97A002821C1 /* OpenSans-SemiBold.ttf in Resources */,
+				9344EBA42A55F974002821C1 /* OpenSans-Bold.ttf in Resources */,
+				9344EBA52A55F976002821C1 /* OpenSans-Light.ttf in Resources */,
+				9344EBA62A55F978002821C1 /* OpenSans-Regular.ttf in Resources */,
 				9357C5032A4F441B00CF4C88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

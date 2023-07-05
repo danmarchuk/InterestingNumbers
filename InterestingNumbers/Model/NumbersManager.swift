@@ -9,7 +9,7 @@ protocol NumbersManagerDelegate {
 final class NumbersManager {
     let factsURL = "http://numbersapi.com/"
     var delegate: NumbersManagerDelegate?
-    var parseOneFact = true
+    var isParseOneFact = true
     var userInputNumber = ""
     // URL session injection for testing
     var session: URLSession
@@ -29,17 +29,16 @@ final class NumbersManager {
                     self?.delegate?.didFailWithError(error: error!)
                     return
                 }
-                if let httpResponse = response as? HTTPURLResponse {
-                    guard httpResponse.statusCode == 200 else {
+                if let httpResponse = response as? HTTPURLResponse,
+                    httpResponse.statusCode == 200  {
                         let error = NSError(domain: "", code: httpResponse.statusCode, userInfo: nil)
                         self?.delegate?.didFailWithError(error: error)
                         return
                     }
-                }
                 
                 if let safeData = data {
                     // if the user chose to see one fact
-                    if self?.parseOneFact == true {
+                    if self?.isParseOneFact == true {
                         if let factsString = String(data: safeData, encoding: .utf8),
                            let facts = self?.parseFactsString(factsString),
                            let manager = self {

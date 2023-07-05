@@ -76,7 +76,11 @@ final class ViewController: UIViewController {
                 textField.accessibilityIdentifier = "toTextField"
             }
 
-            let action = UIAlertAction(title: "Submit", style: .default) { [unowned alert] _ in
+            let action = UIAlertAction(title: "Submit", style: .default) { [weak self] _ in
+                guard let self = self else {
+                    return
+                }
+                
                 guard let fromTextField = alert.textFields?[0], let toTextField = alert.textFields?[1] else {
                     return
                 }
@@ -124,10 +128,10 @@ final class ViewController: UIViewController {
         guard let numbers = mainScreen.textField.text else {return}
         let factsViewController = FactsViewController()
         if displayOneFact {
-            factsViewController.numbersManager.parseOneFact = true
+            factsViewController.numbersManager.isParseOneFact = true
             factsViewController.numbersManager.userInputNumber = numbers
         } else {
-            factsViewController.numbersManager.parseOneFact = false
+            factsViewController.numbersManager.isParseOneFact = false
         }
         factsViewController.userInput = numbers
         factsViewController.modalPresentationStyle = .fullScreen

@@ -19,12 +19,12 @@ final class MainScreen: UIView {
     weak var delegate: MainScreenDelegate?
     var selectedButton: UIButton?
 
-    let someLabel = UILabel().apply {
+    let titleLabel = UILabel().apply {
         $0.text = "Interesting Numbers"
         $0.font = UIFont(name: "OpenSans-Bold", size: 28)
     }
     
-    let someOtherLabel = UILabel().apply {
+    let descriptionLabel = UILabel().apply {
         $0.text = "This App about facts of Numbers \nand Dates"
         $0.font = UIFont(name: "OpenSans-Light", size: 16)
         $0.textColor = K.grayIsh
@@ -34,6 +34,7 @@ final class MainScreen: UIView {
     
     let cubesImage = UIImageView().apply {
         $0.image  = UIImage(named: "cubes")
+        $0.accessibilityIdentifier = "cubesImage"
     }
     
     let userNumberButton = createButton(with: "User\nNumber")
@@ -49,10 +50,10 @@ final class MainScreen: UIView {
     
     let rectangleView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 0.98, green: 0.97, blue: 0.99, alpha: 1.0)
+        view.backgroundColor = K.buttonColor
         view.layer.cornerRadius = 6
         view.layer.borderWidth = 1
-        view.layer.borderColor = UIColor(red: 0.96, green: 0.94, blue: 0.98, alpha: 1.0).cgColor
+        view.layer.borderColor = K.borderColor
         return view
     }()
     
@@ -134,8 +135,8 @@ final class MainScreen: UIView {
     }
     
     private func addElements() {
-        addSubview(someLabel)
-        addSubview(someOtherLabel)
+        addSubview(titleLabel)
+        addSubview(descriptionLabel)
         addSubview(cubesImage)
         addSubview(rectangleView)
         rectangleView.addSubview(textField)
@@ -153,12 +154,12 @@ final class MainScreen: UIView {
             make.width.equalTo(75)
         }
         
-        someLabel.snp.makeConstraints { make in
+        titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(88)
             make.centerX.equalToSuperview()
         }
         
-        someOtherLabel.snp.makeConstraints { make in
+        descriptionLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(150)
             make.centerX.equalToSuperview()
         }
@@ -198,5 +199,21 @@ final class MainScreen: UIView {
             make.height.equalTo(52)
             make.centerX.equalToSuperview()
         }
+        addIdentifiers()
+    }
+    
+    private func addIdentifiers() {
+        userNumberButton.accessibilityIdentifier = "userNumberButton"
+        randomNumberButton.accessibilityIdentifier = "randomNumberButton"
+        numberInRangeButton.accessibilityIdentifier = "numberInRangeButton"
+        multipleNumbersButton.accessibilityIdentifier = "multipleNumbersButton"
+        textField.accessibilityIdentifier = "textField"
+        displayFactButton.accessibilityIdentifier = "displayFactButton"
+
+        titleLabel.accessibilityIdentifier = "titleLabel"
+        descriptionLabel.accessibilityIdentifier = "descriptionLabel"
+        cubesImage.accessibilityIdentifier = "cubesImage"
+        rectangleView.accessibilityIdentifier = "rectangleView"
+        enterHereLabel.accessibilityIdentifier = "enterHereLabel"
     }
 }

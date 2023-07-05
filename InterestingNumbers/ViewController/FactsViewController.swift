@@ -33,6 +33,7 @@ final class FactsViewController: UIViewController, UICollectionViewDelegate {
     let imageButton = UIButton().apply {
         $0.setImage(UIImage(named: "close"), for: .normal)
         $0.tintColor = .white
+        $0.accessibilityIdentifier = "closeButton"
     }
 
     @objc func rightButtonTapped() {

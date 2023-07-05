@@ -11,35 +11,37 @@ import UIKit
 class NumberCell: UICollectionViewCell {
     static let identifier = "NumberCell"
 
-    private let titleLabel = UILabel().apply {
+    private let numberLabel = UILabel().apply {
         $0.textAlignment = .center
         $0.font = UIFont.init(name: "OpenSans-Bold", size: 28)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .white
+        $0.accessibilityIdentifier = "numberLabel"
     }
 
-    private let descriptionLabel = UILabel().apply {
+    private let factLabel = UILabel().apply {
         $0.numberOfLines = 0
         $0.textAlignment = .center
         $0.font = UIFont.init(name: "OpenSans-SemiBold", size: 16)
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .white
+        $0.accessibilityIdentifier = "factLabel"
     }
 
     func configure(withTitle title: String, description: String) {
-        titleLabel.text = title
-        descriptionLabel.text = description
+        numberLabel.text = title
+        factLabel.text = description
 
-        addSubview(titleLabel)
-        addSubview(descriptionLabel)
+        addSubview(numberLabel)
+        addSubview(factLabel)
 
-        titleLabel.snp.makeConstraints { make in
+        numberLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
             make.centerX.equalToSuperview()
         }
 
-        descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(20)
+        factLabel.snp.makeConstraints { make in
+            make.top.equalTo(numberLabel.snp.bottom).offset(20)
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
         }

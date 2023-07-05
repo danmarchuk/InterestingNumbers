@@ -22,6 +22,13 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set up button actions
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     private func handleButtonTapped(_ button: UIButton) {
@@ -60,11 +67,13 @@ final class ViewController: UIViewController {
             alert.addTextField { (textField) in
                 textField.placeholder = "From"
                 textField.keyboardType = .numberPad
+                textField.accessibilityIdentifier = "fromTextField"
             }
 
             alert.addTextField { (textField) in
                 textField.placeholder = "To"
                 textField.keyboardType = .numberPad
+                textField.accessibilityIdentifier = "toTextField"
             }
 
             let action = UIAlertAction(title: "Submit", style: .default) { [unowned alert] _ in
@@ -130,5 +139,10 @@ extension ViewController: UITextFieldDelegate {
         let allowedCharacters = CharacterSet(charactersIn:"0123456789.,")
         let characterSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: characterSet)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -26,6 +26,7 @@
 		93B8B1262A532467007A74B6 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93B8B1252A532464007A74B6 /* OpenSans-SemiBold.ttf */; };
 		93B8B1282A532801007A74B6 /* NumbersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B1272A532801007A74B6 /* NumbersManager.swift */; };
 		93B8B12F2A5390A2007A74B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B12E2A5390A2007A74B6 /* Constants.swift */; };
+		93B8B1302A546DAE007A74B6 /* NumbersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B1272A532801007A74B6 /* NumbersManager.swift */; };
 		93DF31032A507A9000B55099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93DF31022A507A9000B55099 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -348,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B8B1302A546DAE007A74B6 /* NumbersManager.swift in Sources */,
 				9357C5132A4F441D00CF4C88 /* InterestingNumbersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

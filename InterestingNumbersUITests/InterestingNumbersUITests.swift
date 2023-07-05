@@ -9,33 +9,120 @@ import XCTest
 
 final class InterestingNumbersUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+    var app: XCUIApplication!
+    
+    override func setUp() {
+        super.setUp()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    override func tearDown() {
+        app = nil
+        super.tearDown()
     }
+    
+    func testUserNumber() {
+        let userNumberButton = app.buttons["userNumberButton"]
+        let textField = app.textFields["textField"]
+        let displayFactButton = app.buttons["displayFactButton"]
+        let closeButton = app.buttons["closeButton"]
+        let numberLabel = app.textViews["numberLabel"]
+        let factLabel = app.textViews["factLabel"]
+        let cubesImage = app.images["cubesImage"]
+        
+        userNumberButton.tap()
+        textField.tap()
+        textField.typeText("42")
+        cubesImage.tap()
+        displayFactButton.tap()
+        XCTAssertNotNil(factLabel)
+        XCTAssertNotNil(numberLabel)
+        
+        closeButton.tap()
+    }
+    
+    func testRandomNumber() {
+        let randomNumberButton = app.buttons["randomNumberButton"]
+        let displayFactButton = app.buttons["displayFactButton"]
+        let closeButton = app.buttons["closeButton"]
+        let numberLabel = app.textViews["numberLabel"]
+        let factLabel = app.textViews["factLabel"]
+        
+        randomNumberButton.tap()
+        displayFactButton.tap()
+        XCTAssertNotNil(factLabel)
+        XCTAssertNotNil(numberLabel)
+        
+        closeButton.tap()
+    }
+    
+    func testNumbersInRange() {
+        let fromTextField  = app.textFields["fromTextField"]
+        let toTextField  = app.textFields["toTextField"]
+        let numberInRangeButton = app.buttons["numberInRangeButton"]
+        let displayFactButton = app.buttons["displayFactButton"]
+        let closeButton = app.buttons["closeButton"]
+        let numberLabel = app.textViews["numberLabel"]
+        let factLabel = app.textViews["factLabel"]
+        
+        numberInRangeButton.tap()
+        
+        fromTextField.tap()
+        fromTextField.typeText("1")
+        toTextField.tap()
+        toTextField.typeText("12")
+        app.alerts.buttons["Submit"].tap()
+        
+        displayFactButton.tap()
+        XCTAssertNotNil(factLabel)
+        XCTAssertNotNil(numberLabel)
+        
+        closeButton.tap()
+    }
+    
+    func testMultipleNumbersButton() {
+        let multipleNumbersButton = app.buttons["multipleNumbersButton"]
+        let textField = app.textFields["textField"]
+        let displayFactButton = app.buttons["displayFactButton"]
+        let closeButton = app.buttons["closeButton"]
+        let numberLabel = app.textViews["numberLabel"]
+        let factLabel = app.textViews["factLabel"]
+        let cubesImage = app.images["cubesImage"]
+        
+        multipleNumbersButton.tap()
+        app.alerts.buttons["Understand"].tap()
+        textField.tap()
+        textField.typeText("1,2,3,4,5,6,7,22,33,44,55,66,77,89,404")
+        cubesImage.tap()
+        
+        
+        displayFactButton.tap()
+        let collectionView = app.collectionViews.element(boundBy: 0)
+        collectionView.swipeUp(velocity: .fast)
+        
+        collectionView.swipeUp()
+        
+        collectionView.swipeUp()
+        
+        XCTAssertNotNil(factLabel)
+        XCTAssertNotNil(numberLabel)
+        
+        closeButton.tap()
+    }
+    
+    func testTextFieldEntry() {
+        let textField = app.textFields["textField"]
+        
+        // Tap on the text field
+        textField.tap()
+        
+        // Enter a number in the text field
+        textField.typeText("42")
+        
+        // Assert that the text field contains the entered number
+        XCTAssertEqual(textField.value as? String, "42")
+    }
+    
 }

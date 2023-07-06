@@ -1,13 +1,13 @@
-# Pixabay Free Images Search App
+# Interesting Numbers App
+
+This application provides interesting facts about numbers, utilizing the [InterestingNumbersLibrary](https://github.com/danmarchuk/InterestringNumbersLibrary) for data fetching.
 -----------------------------------------------------
 <p float="left">
 <img src="Images/1.png"  width="189" height="409"> 
 <img src="Images/2.png"  width="189" height="409"> 
 <img src="Images/3.gif"  width="189" height="409"> 
 </p>
-# Interesting Numbers App
 
-This application provides interesting facts about numbers, utilizing the [InterestingNumbersLibrary](https://github.com/danmarchuk/InterestringNumbersLibrary) for data fetching.
 
 ## Features
 

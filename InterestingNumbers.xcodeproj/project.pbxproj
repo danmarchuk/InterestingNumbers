@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93233D6A2A56FC85001D28E5 /* InterestringNumbersLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 93233D692A56FC85001D28E5 /* InterestringNumbersLibrary */; };
 		9344EBA42A55F974002821C1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA22A55F7E6002821C1 /* OpenSans-Bold.ttf */; };
 		9344EBA52A55F976002821C1 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA02A55F7E6002821C1 /* OpenSans-Light.ttf */; };
 		9344EBA62A55F978002821C1 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA12A55F7E6002821C1 /* OpenSans-Regular.ttf */; };
@@ -24,9 +25,7 @@
 		9357C5342A4F4F0800CF4C88 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C5332A4F4F0800CF4C88 /* Extensions.swift */; };
 		939102FF2A531749002A4810 /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939102FE2A531749002A4810 /* FactsViewController.swift */; };
 		939103012A531B0A002A4810 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939103002A531B0A002A4810 /* NumberCell.swift */; };
-		93B8B1282A532801007A74B6 /* NumbersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B1272A532801007A74B6 /* NumbersManager.swift */; };
 		93B8B12F2A5390A2007A74B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B12E2A5390A2007A74B6 /* Constants.swift */; };
-		93B8B1302A546DAE007A74B6 /* NumbersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8B1272A532801007A74B6 /* NumbersManager.swift */; };
 		93DF31032A507A9000B55099 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 93DF31022A507A9000B55099 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		9357C5332A4F4F0800CF4C88 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		939102FE2A531749002A4810 /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
 		939103002A531B0A002A4810 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
-		93B8B1272A532801007A74B6 /* NumbersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersManager.swift; sourceTree = "<group>"; };
 		93B8B12E2A5390A2007A74B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93DF31032A507A9000B55099 /* SnapKit in Frameworks */,
+				93233D6A2A56FC85001D28E5 /* InterestringNumbersLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +185,6 @@
 		93B8B12D2A538E49007A74B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				93B8B1272A532801007A74B6 /* NumbersManager.swift */,
 				9357C5332A4F4F0800CF4C88 /* Extensions.swift */,
 			);
 			path = Model;
@@ -210,6 +208,7 @@
 			name = InterestingNumbers;
 			packageProductDependencies = (
 				93DF31022A507A9000B55099 /* SnapKit */,
+				93233D692A56FC85001D28E5 /* InterestringNumbersLibrary */,
 			);
 			productName = InterestingNumbers;
 			productReference = 9357C4F82A4F441B00CF4C88 /* InterestingNumbers.app */;
@@ -285,6 +284,7 @@
 			mainGroup = 9357C4EF2A4F441B00CF4C88;
 			packageReferences = (
 				93DF31012A507A9000B55099 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				93233D682A56FC85001D28E5 /* XCRemoteSwiftPackageReference "InterestringNumbersLibrary" */,
 			);
 			productRefGroup = 9357C4F92A4F441B00CF4C88 /* Products */;
 			projectDirPath = "";
@@ -334,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9357C5342A4F4F0800CF4C88 /* Extensions.swift in Sources */,
-				93B8B1282A532801007A74B6 /* NumbersManager.swift in Sources */,
 				939102FF2A531749002A4810 /* FactsViewController.swift in Sources */,
 				9357C5322A4F4CE500CF4C88 /* MainScreen.swift in Sources */,
 				9357C5002A4F441B00CF4C88 /* ViewController.swift in Sources */,
@@ -349,7 +348,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B8B1302A546DAE007A74B6 /* NumbersManager.swift in Sources */,
 				9357C5132A4F441D00CF4C88 /* InterestingNumbersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,6 +684,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		93233D682A56FC85001D28E5 /* XCRemoteSwiftPackageReference "InterestringNumbersLibrary" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danmarchuk/InterestringNumbersLibrary";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		93DF31012A507A9000B55099 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -697,6 +703,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		93233D692A56FC85001D28E5 /* InterestringNumbersLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93233D682A56FC85001D28E5 /* XCRemoteSwiftPackageReference "InterestringNumbersLibrary" */;
+			productName = InterestringNumbersLibrary;
+		};
 		93DF31022A507A9000B55099 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 93DF31012A507A9000B55099 /* XCRemoteSwiftPackageReference "SnapKit" */;

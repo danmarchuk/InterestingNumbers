@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import InterestringNumbersLibrary
 
 // Create the ViewController with CollectionView
 final class FactsViewController: UIViewController, UICollectionViewDelegate {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93233D6A2A56FC85001D28E5 /* InterestringNumbersLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 93233D692A56FC85001D28E5 /* InterestringNumbersLibrary */; };
+		93233D6C2A572106001D28E5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 93233D6B2A572106001D28E5 /* README.md */; };
 		9344EBA42A55F974002821C1 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA22A55F7E6002821C1 /* OpenSans-Bold.ttf */; };
 		9344EBA52A55F976002821C1 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA02A55F7E6002821C1 /* OpenSans-Light.ttf */; };
 		9344EBA62A55F978002821C1 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9344EBA12A55F7E6002821C1 /* OpenSans-Regular.ttf */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93233D6B2A572106001D28E5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9344EBA02A55F7E6002821C1 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		9344EBA12A55F7E6002821C1 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		9344EBA22A55F7E6002821C1 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		9357C4EF2A4F441B00CF4C88 = {
 			isa = PBXGroup;
 			children = (
+				93233D6B2A572106001D28E5 /* README.md */,
 				9357C4FA2A4F441B00CF4C88 /* InterestingNumbers */,
 				9357C5112A4F441D00CF4C88 /* InterestingNumbersTests */,
 				9357C51B2A4F441D00CF4C88 /* InterestingNumbersUITests */,
@@ -308,6 +311,7 @@
 				9344EBA42A55F974002821C1 /* OpenSans-Bold.ttf in Resources */,
 				9344EBA52A55F976002821C1 /* OpenSans-Light.ttf in Resources */,
 				9344EBA62A55F978002821C1 /* OpenSans-Regular.ttf in Resources */,
+				93233D6C2A572106001D28E5 /* README.md in Resources */,
 				9357C5032A4F441B00CF4C88 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
